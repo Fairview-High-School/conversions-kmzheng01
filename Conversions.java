@@ -25,7 +25,7 @@ public class Conversions
 
         if (selection == 1)
         {
-            System.out.println("Enter Celsius: ");
+            System.out.print("Enter Celsius: ");
             double celsius = keyboard.nextDouble();
             keyboard.nextLine();
             double fahrenheit = celsius * (9.0 / 5.0) + 32;
@@ -33,8 +33,40 @@ public class Conversions
         }
         if (selection == 2)
         {
-            //add the code to ask the user to enter Fahrenheit and then convert to Celsius
+            System.out.print("Enter Fahrenheit: ");
+            double fahrenheit = keyboard.nextDouble();
+            double celsius = (fahrenheit - 32) * (5.0/9.0);
+            System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celsius");
         }
-        //add more if statements here.
+        if (selection == 3)
+        {
+            System.out.print("Enter Feet: ");
+            double feet = keyboard.nextDouble();
+            double meters = feet / 3.281;
+            System.out.println(feet + " feet is " + meters + " meters");
+        }
+        if (selection == 4)
+        {
+            System.out.print("Enter Meters: ");
+            double meters = keyboard.nextDouble();
+            double feet = meters * 3.281;
+            System.out.println(meters + " meters is " + feet + " feet");
+        }
+        if (selection == 5)
+        {
+            System.out.print("Enter Ounces: ");
+            double ounces = keyboard.nextDouble();
+            double milliliters = ounces * 29.574;
+            System.out.println(ounces + " ounces is " + milliliters + " milliliters");
+        }
+        if (selection == 6) {
+            System.out.print("Enter Milliliters: ");
+            double milliliters = keyboard.nextDouble();
+            double ounces = milliliters / 29.574;
+            System.out.println(milliliters + " milliliters is " + ounces + " ounces");
+        }
+        else {
+            System.out.println("Please select a number with the range 1-6");
+        }
     }
 }
